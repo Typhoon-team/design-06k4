@@ -25,10 +25,10 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "pnpm run clean && rollup -c",
+    "build": "npm run clean && rollup -c",
     "clean": "rimraf ./dist",
-    "update": "pnpm run build:esm && npm publish",
-    "build:esm": "pnpm run clean && cross-env BABEL_ENV=esm rollup -c",
+    "update": "npm run build:esm && npm publish",
+    "build:esm": "npm run clean && cross-env BABEL_ENV=esm rollup -c",
     "build:typed": "tsc --declaration --emitDeclarationOnly --noEmit false --outDir dist/types",
     "build-css": "sass ./src/style/index.scss ./dist/index.css"
   },
@@ -39,7 +39,6 @@
     "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "17.0.2",
-    "react-is": "^18.0.0",
     "react-transition-group": "^4.4.2"
   },
   "dependencies": {
